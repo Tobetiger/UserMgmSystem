@@ -7,9 +7,9 @@ const AppUserList = ({ users, handleUpdateUser, handleDeleteUser }) => {
         <li key={user._id}>
           {user.name} ({user.email}) - {user.role}
           <button onClick={() => handleUpdateUser(user._id, { role: user.role === 'Admin' ? 'Regular' : 'Admin' })}>
-            Toggle Role
+            User Role
           </button>
-          <button onClick={() => handleDeleteUser(user._id)}>Delete</button>
+          <button onClick={() => handleDeleteUser(user._id)}>Delete User</button>
         </li>
       ))}
     </ul>
